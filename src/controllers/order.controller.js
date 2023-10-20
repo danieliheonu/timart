@@ -33,8 +33,9 @@ exports.createOrder = async ({ input }) => {
 	}
 };
 
-exports.getUserOrders = async ({ userId }) => {
+exports.getUserOrders = async ({ userId, page = 1 }) => {
 	try {
+		const limit = 10;
 		const user = await User.findByPk(userId);
 		if (!user) {
 			return {
@@ -46,7 +47,11 @@ exports.getUserOrders = async ({ userId }) => {
 			};
 		}
 
-		const orders = await user.getOrders();
+		const orders = await user.getOrders({
+			limit,
+			offset: page * limit,
+			order: [["createdAt", "DESC"]],
+		});
 
 		return {
 			__typename: "OrdersResponse",

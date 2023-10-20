@@ -61,6 +61,7 @@ type Query {
     ): UserResult
     getUserOrders(
         userId: ID!
+        page: Int
     ): OrdersResult
 }
 
