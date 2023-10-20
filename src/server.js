@@ -14,7 +14,7 @@ app.listen(port, () => {
 		.catch((error) => {
 			console.error("Unable to connect to the database:", error);
 		});
-	sequelize.sync({ alter: true }).then(() => {
+	sequelize.sync().then(() => {
 		console.log("All models were synchronized successfully.");
 	});
 });
