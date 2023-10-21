@@ -7,7 +7,7 @@
 
 ## SETUP DATABASE SCHEMA
 
-1. Open MYSQL Workbench or PHPAdmin
+1. Open MySQL Workbench or phpMyAdmin
 2. Create a database with the name `timartdb` or run the command `CREATE DATABASE timartdb;`
 3. Select `timartdb` database or run the command to select it `USE timartdb;`
 4. RUn the following command to create the `users` table in the database `CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, userName VARCHAR(255) NOT NULL UNIQUE, email VARCHAR(255) NOT NULL UNIQUE, firstName VARCHAR(255) NOT NULL, lastName VARCHAR(255) NOT NULL, createdAt DATETIME NOT NULL, updatedAt DATETIME NOT NULL, PRIMARY KEY(id));`
