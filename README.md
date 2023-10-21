@@ -1,5 +1,10 @@
 # STEPS TO RUN THE APPLICATION
 
+-    [SETUP DATABASE SCHEMA](#setup-database-schema)
+-    [SETUP AND RUN THE SERVER](#setup-and-run-the-server)
+-    [SEED THE DATABASE](#seed-the-database)
+-    [RETRIEVE TOP 10 USERS WITH THE MOST ORDERS](#retrieve-top-10-users-with-the-most-orders)
+
 ## SETUP DATABASE SCHEMA
 
 1. Open MYSQL Workbench or PHPAdmin
