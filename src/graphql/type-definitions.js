@@ -8,7 +8,8 @@ scalar Date
 input UserInput {
     userName: String!
     email: Email!
-    password: String!
+    firstName: String!
+    lastName: String!
 }
 
 input OrderInput {
@@ -29,7 +30,8 @@ type User {
     id: ID!
     userName: String
     email: Email
-    password: String
+    firstName: String
+    lastName: String
 }
 
 type Order {

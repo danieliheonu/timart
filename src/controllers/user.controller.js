@@ -1,14 +1,10 @@
-const bcrypt = require("bcryptjs");
 const User = require("../models/user.model");
 
 exports.createUser = async ({ input }) => {
 	try {
-		const { userName, email, password } = input;
+		const { userName, email, firstName, lastName } = input;
 
-		const salt = await bcrypt.genSalt(10);
-		const hashedPassword = await bcrypt.hash(password, salt);
-
-		const user = await User.create({ userName, email, password: hashedPassword });
+		const user = await User.create({ userName, email, firstName, lastName });
 
 		return {
 			__typename: "UserResponse",
